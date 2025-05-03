@@ -1,1 +1,49 @@
 /* 여기에 스타일을 구현해 주세요 */
+
+/* 아바타 */
+body {
+  background-color: #ffffff;
+  padding: 100px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.avatar-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+  justify-content: center;
+}
+
+.avatar {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 상태 표시 원 */
+.status {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  border: 2px solid white;
+}
+
+.status.gray {
+  background-color: #dbdbdb;
+}
+
+.status.green {
+  background-color: #4cfe88;
+}
