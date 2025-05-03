@@ -1,13 +1,25 @@
-/* 여기에 스타일을 구현해 주세요 */
-
-/* 아바타 */
 body {
   background-color: #ffffff;
   padding: 100px;
   margin: 0;
+  font-family: 'SUIT', sans-serif;
+}
+
+.avatar-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.avatar-section h1 {
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 .avatar-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 20px;
@@ -20,6 +32,10 @@ body {
   height: 64px;
 }
 
+.avatar figure {
+  margin: 0;
+}
+
 .avatar img {
   width: 64px;
   height: 64px;
@@ -28,7 +44,6 @@ body {
   display: block;
 }
 
-/* 상태 표시 원 */
 .status {
   position: absolute;
   width: 14px;
