@@ -1,3 +1,87 @@
 @import "./reset.css";
 @import "./theme.css";
 @import "./base.css";
+@import "./card-component.css";
+
+.product-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: var(--size);
+  background-color: var(--white);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  background-image: 
+  image-set(url('../products/airpods_pro_2x.webp') 1x,
+      url('../products/airpods_pro_2x.webp') 2x);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+}
+
+/* 절대 위치로 이미지 위에 겹침 */
+.product-info {
+  position: absolute;
+  top: var(--large-spacing);
+  /* 위쪽 여백 */
+  left: 50%;
+  /* 가로 중앙 */
+  transform: translateX(-50%);
+  width: 90%;
+  /* 넉넉한 너비 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--x-small-spacing);
+  color: var(--white);
+}
+
+.product-title {
+  font-size: var(--large-text);
+  margin: 0;
+}
+
+.product-subtitle {
+  font-size: var(--small-text);
+  line-height: var(--line-normal);
+  margin: 0;
+}
+
+.product-buttons {
+  display: flex;
+  gap: var(--base-spacing);
+  margin-top: var(--x-small-spacing);
+}
+
+.btn {
+  padding: var(--x-small-spacing) var(--small-spacing);
+  font-size: var(--xx-small-text);
+  text-decoration: none;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: inline-block;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: var(--blue-300);
+}
+
+.btn-blue:hover {
+  background-color: #0050ab;
+}
+
+.btn-gray {
+  background-color: var(--gray);
+}
+
+.btn-gray:hover {
+  background-color: #5b5b5b;
+}

@@ -1,3 +1,24 @@
-@import "./card-component.css";
+@import url(./card-component.css);
 
-/* 카드 레이아웃 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* ✅ 1024px 이하일 때: 카드 한 줄씩, 꽉 차게 */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    /* 여백 줄이기 */
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
